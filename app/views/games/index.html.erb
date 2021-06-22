@@ -1,5 +1,11 @@
 <div class="top-page">
-  <h1>ワンナイト人狼</h1>
+  <div class="top-page-hedder">
+    <h1>ワンナイト人狼</h1>
+    <div class="set-game">
+      <%= link_to "プレイヤー登録", new_player_path  %>
+      <%= link_to "役職追加", new_job_path  %>
+    </div>
+  </div>
   <%= image_tag "ワンナイト人狼top画像.jpeg", class:"top-image" %>
   <%= link_to image_tag("start_btn.png", class:"game-start-btn"), new_game_path %>
 </div>
