@@ -1,0 +1,15 @@
+.new-player{
+  display: inline;
+  text-align: center;
+}
+
+.field{
+  margin: 30px;
+}
+
+.field-image{
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

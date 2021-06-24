@@ -1,0 +1,16 @@
+<h3>ユーザー作成画面</h3>
+<%= form_with model:@job, url: jobs_path, local: true do |f| %>
+  <div class="new-player">
+    <div class="field" >
+      <label class="form-text">役職名を入力してください</label>
+      <%= f.text_field :job, class:"input-text" %>
+    </div>
+    <div class="field-image">
+      <%= f.label :image, "役職の画像" %><br />
+      <%= f.file_field :image, id:"prototype_image" %>
+    </div>
+    <div class="action-btn">
+      <%= f.submit "登録" %>
+    </div>
+  </div>
+<% end %> 
