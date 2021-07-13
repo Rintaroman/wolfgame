@@ -12,15 +12,24 @@
 
   <div id="join-list"></div>
   
-  <div class="player-select">
+  <div class="select">
     <%= form_with model:@game, url: games_path, local: true do |f| %>
-      <% @players.each do |player| %>
-        <%= f.check_box :player_id %>
-        <%= player.name%>
-      <% end %>
-
+      <div class="player-select">
+        <% @players.each do |player| %>
+          <%= f.check_box :player_id %>
+          <%= player.name%>
+        <% end %>
+      </div>
+      <div class="job-select">
+        <% @jobs.each do |job| %>
+          <%= job.job %>
+          <%= image_tag job.image%>
+        <% end %>
+      </div>
     <% end %>
   </div>
 
+  <div class="job-select">
+    <%=  %>
 
 </div>
