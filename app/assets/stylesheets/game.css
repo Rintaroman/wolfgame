@@ -8,9 +8,7 @@
   justify-content:space-between
 }
 
-.set-game{
 
-}
 
 .top-image{
   width: 100%;
@@ -21,3 +19,17 @@
   margin: 0 auto;
   width: 300px;
 }
+
+.job-select{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.job-count{
+  display: flex;
+}
+
+

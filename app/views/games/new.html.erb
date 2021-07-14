@@ -20,16 +20,19 @@
           <%= player.name%>
         <% end %>
       </div>
-      <div class="job-select">
+      <div class="job-select" >
+        <div id="join-job"></div>
         <% @jobs.each do |job| %>
           <%= job.job %>
+          <div class="job-count">
+            <input type="button" value="+" id="btn_count_up" />
+            <div id="disp_count">0</div>
+            <input type="button" value="−" id="btn_reset" />
+          </div>
           <%= image_tag job.image%>
         <% end %>
       </div>
     <% end %>
   </div>
 
-  <div class="job-select">
-    <%=  %>
-
-</div>
+  
