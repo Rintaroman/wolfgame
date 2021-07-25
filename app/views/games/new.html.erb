@@ -1,4 +1,38 @@
 <div class="new-game-page">
   <h3>NEW GAME</h3>
-  <%= form_with model:@player,  %>
-</div>
+  <select id="join-game">
+    <option value="">参加人数を選択してください</option>
+    <option value=3>３人</option>
+    <option value=4>4人</option>
+    <option value=5>５人</option>
+    <option value=6>６人</option>
+    <option value=7>７人</option>
+    <option value=8>８人</option>
+  </select>
+
+  <div id="join-list"></div>
+  
+  <div class="select">
+    <%= form_with model:@game, url: games_path, local: true do |f| %>
+      <div class="player-select">
+        <% @players.each do |player| %>
+          <%= f.check_box :player_id %>
+          <%= player.name%>
+        <% end %>
+      </div>
+      <div class="job-select" >
+        <div id="join-job"></div>
+        <% @jobs.each do |job| %>
+          <%= job.job %>
+          <div class="job-count">
+            <input type="button" value="+" id="btn_count_up" />
+            <div id="disp_count">0</div>
+            <input type="button" value="−" id="btn_count_down" />
+          </div>
+          <%= image_tag job.image%>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  
