@@ -7,4 +7,8 @@ class GamesController < ApplicationController
     @players = Player.all
     @jobs = Job.all
   end
+
+  def create
+    @games = games.new
+  end
 end
